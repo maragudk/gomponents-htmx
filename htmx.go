@@ -72,6 +72,18 @@ func Vals(v string) g.Node {
 	return attr("vals", v)
 }
 
+// Delete will issue a DELETE to the specified URL and swap the HTML into the DOM using a swap strategy.
+// See https://htmx.org/attributes/hx-delete/
+func Delete(v string) g.Node {
+	return attr("delete", v)
+}
+
+// Confirm allows you to confirm an action before issuing a request.
+// See https://htmx.org/attributes/hx-confirm/
+func Confirm(v string) g.Node {
+	return attr("confirm", v)
+}
+
 func attr(name, value string) g.Node {
 	return g.Attr("hx-"+name, value)
 }

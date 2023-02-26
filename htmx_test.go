@@ -25,6 +25,8 @@ func TestAttributes(t *testing.T) {
 		"target":     hx.Target,
 		"trigger":    hx.Trigger,
 		"vals":       hx.Vals,
+		"delete":     hx.Delete,
+		"confirm":    hx.Confirm,
 	}
 
 	for name, fn := range cases {
