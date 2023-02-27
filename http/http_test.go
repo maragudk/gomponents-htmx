@@ -88,3 +88,9 @@ func ExampleIsBoosted() {
 		}
 	})
 }
+
+func ExampleSetRefresh() {
+	_ = http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		hxhttp.SetRefresh(w.Header())
+	})
+}
