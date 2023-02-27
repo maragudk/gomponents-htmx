@@ -1,19 +1,3 @@
-# gomponents-htmx
-
-[![GoDoc](https://pkg.go.dev/badge/github.com/maragudk/gomponents-htmx)](https://pkg.go.dev/github.com/maragudk/gomponents-htmx)
-[![CI](https://github.com/maragudk/gomponents-htmx/actions/workflows/ci.yml/badge.svg)](https://github.com/maragudk/gomponents-htmx/actions/workflows/ci.yml)
-
-[HTMX](https://htmx.org) attributes and helpers for [gomponents](https://www.gomponents.com).
-
-## Usage
-
-```shell
-go get github.com/maragudk/gomponents-htmx
-```
-
-Example app:
-
-```go
 package main
 
 import (
@@ -26,6 +10,7 @@ import (
 	c "github.com/maragudk/gomponents/components"
 	. "github.com/maragudk/gomponents/html"
 	ghttp "github.com/maragudk/gomponents/http"
+
 	hx "github.com/maragudk/gomponents-htmx"
 	hxhttp "github.com/maragudk/gomponents-htmx/http"
 )
@@ -84,8 +69,3 @@ func page(now time.Time) g.Node {
 func partial(now time.Time) g.Node {
 	return P(ID("partial"), g.Textf(`Time was last updated at %v.`, now.Format(timeFormat)))
 }
-
-```
-
-
-Made in 🇩🇰 by [maragu](https://www.maragu.dk/), maker of [online Go courses](https://www.golang.dk/).
