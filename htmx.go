@@ -72,16 +72,124 @@ func Vals(v string) g.Node {
 	return attr("vals", v)
 }
 
+// Confirm shows a confirm() dialog before issuing a request.
+// See https://htmx.org/attributes/hx-confirm
+func Confirm(v string) g.Node {
+	return attr("confirm", v)
+}
+
 // Delete will issue a DELETE to the specified URL and swap the HTML into the DOM using a swap strategy.
-// See https://htmx.org/attributes/hx-delete/
+// See https://htmx.org/attributes/hx-delete
 func Delete(v string) g.Node {
 	return attr("delete", v)
 }
 
-// Confirm allows you to confirm an action before issuing a request.
-// See https://htmx.org/attributes/hx-confirm/
-func Confirm(v string) g.Node {
-	return attr("confirm", v)
+// Disable htmx processing for the given node and any children nodes.
+// See https://htmx.org/attributes/hx-disable
+func Disable(v string) g.Node {
+	return attr("disable", v)
+}
+
+// Disinherit controls and disables automatic attribute inheritance for child nodes.
+// See https://htmx.org/attributes/hx-disinherit
+func Disinherit(v string) g.Node {
+	return attr("disinherit", v)
+}
+
+// Encoding changes the request encoding type.
+// See https://htmx.org/attributes/hx-encoding
+func Encoding(v string) g.Node {
+	return attr("encoding", v)
+}
+
+// Ext sets extensions to use for this element.
+// See https://htmx.org/attributes/hx-ext
+func Ext(v string) g.Node {
+	return attr("ext", v)
+}
+
+// Headers adds to the headers that will be submitted with the request.
+// See https://htmx.org/attributes/hx-headers
+func Headers(v string) g.Node {
+	return attr("headers", v)
+}
+
+// History prevents sensitive data being saved to the history cache.
+// See https://htmx.org/attributes/hx-history
+func History(v string) g.Node {
+	return attr("history", v)
+}
+
+// HistoryElt sets the element to snapshot and restore during history navigation.
+// See https://htmx.org/attributes/hx-history-elt
+func HistoryElt(v string) g.Node {
+	return attr("history-elt", v)
+}
+
+// Include additional data in requests.
+// See https://htmx.org/attributes/hx-include
+func Include(v string) g.Node {
+	return attr("include", v)
+}
+
+// Indicator sets the element to put the htmx-request class on during the request.
+// See https://htmx.org/attributes/hx-indicator
+func Indicator(v string) g.Node {
+	return attr("indicator", v)
+}
+
+// Params filters the parameters that will be submitted with a request.
+// See https://htmx.org/attributes/hx-params
+func Params(v string) g.Node {
+	return attr("params", v)
+}
+
+// Patch issues a PATCH to the specified URL.
+// See https://htmx.org/attributes/hx-patch
+func Patch(v string) g.Node {
+	return attr("patch", v)
+}
+
+// Preserve specifies elements to keep unchanged between requests.
+// See https://htmx.org/attributes/hx-preserve
+func Preserve(v string) g.Node {
+	return attr("preserve", v)
+}
+
+// Prompt shows a prompt() before submitting a request.
+// See https://htmx.org/attributes/hx-prompt
+func Prompt(v string) g.Node {
+	return attr("prompt", v)
+}
+
+// Put issues a PUT to the specified URL.
+// See https://htmx.org/attributes/hx-put
+func Put(v string) g.Node {
+	return attr("put", v)
+}
+
+// ReplaceURL replaces the URL in the browser location bar.
+// See https://htmx.org/attributes/hx-replace-url
+func ReplaceURL(v string) g.Node {
+	return attr("replace-url", v)
+}
+
+// Request configures various aspects of the request.
+// See https://htmx.org/attributes/hx-request
+func Request(v string) g.Node {
+	return attr("request", v)
+}
+
+// Sync controls how requests made by different elements are synchronized.
+// See https://htmx.org/attributes/hx-sync
+func Sync(v string) g.Node {
+	return attr("sync", v)
+}
+
+// Validate forces elements to validate themselves before a request.
+// See https://htmx.org/attributes/hx-validate
+func Validate(v string) g.Node {
+	return attr("validate", v)
 }
 
 func attr(name, value string) g.Node {
