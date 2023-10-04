@@ -3,6 +3,8 @@
 package htmx
 
 import (
+	"io"
+
 	g "github.com/maragudk/gomponents"
 )
 
@@ -16,6 +18,12 @@ func Boost(v string) g.Node {
 // See https://htmx.org/attributes/hx-get
 func Get(url string) g.Node {
 	return attr("get", url)
+}
+
+// On handles any event with a script inline.
+// See https://htmx.org/attributes/hx-on
+func On(name string, v string) g.Node {
+	return &rawAttr{name: name, value: v}
 }
 
 // Post to the specified URL.
@@ -194,4 +202,19 @@ func Validate(v string) g.Node {
 
 func attr(name, value string) g.Node {
 	return g.Attr("hx-"+name, value)
+}
+
+// rawAttr is an attribute that doesn't escape its value.
+type rawAttr struct {
+	name  string
+	value string
+}
+
+func (r *rawAttr) Render(w io.Writer) error {
+	_, err := w.Write([]byte(" hx-on:" + r.name + `="` + r.value + `"`))
+	return err
+}
+
+func (r *rawAttr) Type() g.NodeType {
+	return g.AttributeType
 }
