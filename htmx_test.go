@@ -60,3 +60,15 @@ func ExampleGet() {
 	_ = n.Render(os.Stdout)
 	// Output: <button hx-post="/clicked" hx-swap="outerHTML"></button>
 }
+
+func TestOn(t *testing.T) {
+	t.Run(`should output hx-on:click="alert('hat')"`, func(t *testing.T) {
+		n := g.El("div", hx.On("click", "alert('hat')"))
+		assert.Equal(t, `<div hx-on:click="alert('hat')"></div>`, n)
+	})
+
+	t.Run(`should output hx-on::before-request="alert('hat')"`, func(t *testing.T) {
+		n := g.El("div", hx.On(":before-request", "alert('hat')"))
+		assert.Equal(t, `<div hx-on::before-request="alert('hat')"></div>`, n)
+	})
+}
