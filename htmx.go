@@ -23,7 +23,7 @@ func Get(url string) g.Node {
 // On handles any event with a script inline.
 // See https://htmx.org/attributes/hx-on
 func On(name string, v string) g.Node {
-	return &rawAttr{name: name, value: v}
+	return &rawAttr{name: "on:" + name, value: v}
 }
 
 // Post to the specified URL.
@@ -211,7 +211,7 @@ type rawAttr struct {
 }
 
 func (r *rawAttr) Render(w io.Writer) error {
-	_, err := w.Write([]byte(" hx-on:" + r.name + `="` + r.value + `"`))
+	_, err := w.Write([]byte(" hx-" + r.name + `="` + r.value + `"`))
 	return err
 }
 
