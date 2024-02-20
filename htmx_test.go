@@ -28,6 +28,7 @@ func TestAttributes(t *testing.T) {
 		"confirm":     hx.Confirm,
 		"delete":      hx.Delete,
 		"disable":     hx.Disable,
+		"disable-elt": hx.DisableElt,
 		"disinherit":  hx.Disinherit,
 		"encoding":    hx.Encoding,
 		"ext":         hx.Ext,
