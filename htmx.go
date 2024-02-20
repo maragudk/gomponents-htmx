@@ -98,6 +98,12 @@ func Disable(v string) g.Node {
 	return attr("disable", v)
 }
 
+// Disable element until htmx request completes.
+// See https://htmx.org/attributes/hx-disabled-elt/
+func DisableElt(v string) g.Node {
+	return attr("disable-elt", v)
+}
+
 // Disinherit controls and disables automatic attribute inheritance for child nodes.
 // See https://htmx.org/attributes/hx-disinherit
 func Disinherit(v string) g.Node {
