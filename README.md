@@ -14,7 +14,7 @@ Does your company depend on this project? [Contact me at markus@maragu.dk](mailt
 ## Usage
 
 ```shell
-go get maragu.dev/gomponents-htmx@v1.0.0-beta1
+go get maragu.dev/gomponents-htmx
 ```
 
 ```go
