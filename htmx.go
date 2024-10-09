@@ -5,7 +5,7 @@ package htmx
 import (
 	"io"
 
-	g "github.com/maragudk/gomponents"
+	g "maragu.dev/gomponents"
 )
 
 // Boost to add or remove progressive enhancement for links and forms.

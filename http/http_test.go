@@ -6,7 +6,7 @@ import (
 
 	"maragu.dev/is"
 
-	hxhttp "github.com/maragudk/gomponents-htmx/http"
+	hxhttp "maragu.dev/gomponents-htmx/http"
 )
 
 func TestBoolGetters(t *testing.T) {
