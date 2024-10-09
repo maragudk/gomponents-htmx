@@ -17,31 +17,46 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        go:
+          - "1.18"
+          - "1.19"
+          - "1.20"
+          - "1.21"
+          - "1.22"
+          - "1.23"
+
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Setup Go
-        uses: actions/setup-go@v3
+        uses: actions/setup-go@v5
         with:
-          go-version-file: go.mod
+          go-version: ${{ matrix.go }}
           check-latest: true
 
       - name: Build
         run: go build -v ./...
 
       - name: Test
-        run: go test -v -coverprofile=cover.out -shuffle on ./...
+        run: go test -v -coverprofile=coverage.txt -shuffle on ./...
 
   lint:
     name: Lint
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
+
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+          check-latest: true
 
       - name: Lint
-        uses: golangci/golangci-lint-action@v2
+        uses: golangci/golangci-lint-action@v6
         with:
           version: latest
