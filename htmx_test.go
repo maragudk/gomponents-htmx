@@ -5,11 +5,11 @@ import (
 	"os"
 	"testing"
 
-	g "github.com/maragudk/gomponents"
-	. "github.com/maragudk/gomponents/html"
+	g "maragu.dev/gomponents"
+	. "maragu.dev/gomponents/html"
 
-	hx "github.com/maragudk/gomponents-htmx"
-	"github.com/maragudk/gomponents-htmx/internal/assert"
+	hx "maragu.dev/gomponents-htmx"
+	"maragu.dev/gomponents-htmx/internal/assert"
 )
 
 func TestAttributes(t *testing.T) {
