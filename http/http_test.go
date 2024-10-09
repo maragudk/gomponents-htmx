@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"testing"
 
-	"github.com/maragudk/is"
+	"maragu.dev/is"
 
 	hxhttp "github.com/maragudk/gomponents-htmx/http"
 )
