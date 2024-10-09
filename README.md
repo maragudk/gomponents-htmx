@@ -3,7 +3,7 @@
 <img src="logo.png" alt="Logo" width="300" align="right">
 
 [![GoDoc](https://pkg.go.dev/badge/maragu.dev/gomponents-htmx)](https://pkg.go.dev/maragu.dev/gomponents-htmx)
-[![CI](https://maragu.dev/gomponents-htmx/actions/workflows/ci.yml/badge.svg)](https://maragu.dev/gomponents-htmx/actions/workflows/ci.yml)
+[![CI](https://github.com/maragudk/gomponents-htmx/actions/workflows/ci.yml/badge.svg)](https://github.com/maragudk/gomponents-htmx/actions/workflows/ci.yml)
 
 [HTMX](https://htmx.org) attributes and helpers for [gomponents](https://www.gomponents.com).
 
