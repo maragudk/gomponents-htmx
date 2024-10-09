@@ -28,7 +28,7 @@ func start() error {
 		if r.Method == http.MethodPost && hxhttp.IsBoosted(r.Header) {
 			now = time.Now()
 
-			hxhttp.SetPushURL(w.Header(), "/?time="+now.Format(time.TimeOnly))
+			hxhttp.SetPushURL(w.Header(), "/?time="+now.Format(timeOnly))
 
 			return partial(now), nil
 		}
@@ -42,9 +42,11 @@ func start() error {
 	return nil
 }
 
+const timeOnly = "15:04:05"
+
 func page(now time.Time) Node {
 	return HTML5(HTML5Props{
-		Title: now.Format(time.TimeOnly),
+		Title: now.Format(timeOnly),
 
 		Head: []Node{
 			Script(Src("https://cdn.tailwindcss.com?plugins=forms,typography")),
@@ -55,7 +57,7 @@ func page(now time.Time) Node {
 			Div(Class("max-w-7xl mx-auto p-4 prose lg:prose-lg xl:prose-xl"),
 				H1(Text(`gomponents + HTMX`)),
 
-				P(Textf(`Time at last full page refresh was %v.`, now.Format(time.TimeOnly))),
+				P(Textf(`Time at last full page refresh was %v.`, now.Format(timeOnly))),
 
 				partial(now),
 
@@ -72,5 +74,5 @@ func page(now time.Time) Node {
 }
 
 func partial(now time.Time) Node {
-	return P(ID("partial"), Textf(`Time was last updated at %v.`, now.Format(time.TimeOnly)))
+	return P(ID("partial"), Textf(`Time was last updated at %v.`, now.Format(timeOnly)))
 }
