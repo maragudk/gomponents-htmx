@@ -1,17 +1,21 @@
 # gomponents-htmx
 
+<img src="logo.png" alt="Logo" width="300" align="right">
+
 [![GoDoc](https://pkg.go.dev/badge/github.com/maragudk/gomponents-htmx)](https://pkg.go.dev/github.com/maragudk/gomponents-htmx)
 [![CI](https://github.com/maragudk/gomponents-htmx/actions/workflows/ci.yml/badge.svg)](https://github.com/maragudk/gomponents-htmx/actions/workflows/ci.yml)
 
 [HTMX](https://htmx.org) attributes and helpers for [gomponents](https://www.gomponents.com).
+
+Made with ✨sparkles✨ by [maragu](https://www.maragu.dev/).
+
+Does your company depend on this project? [Contact me at markus@maragu.dk](mailto:markus@maragu.dk?Subject=Supporting%20your%20project) to discuss options for a one-time or recurring invoice to ensure its continued thriving.
 
 ## Usage
 
 ```shell
 go get github.com/maragudk/gomponents-htmx
 ```
-
-Example app:
 
 ```go
 package main
