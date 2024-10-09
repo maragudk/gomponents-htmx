@@ -4,4 +4,4 @@ go 1.20
 
 require github.com/maragudk/gomponents v0.20.1
 
-require github.com/maragudk/is v0.1.0
+require maragu.dev/is v0.2.0
